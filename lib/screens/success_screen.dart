@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profile_setup_screen.dart';
+import 'home_screen.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
@@ -25,20 +25,28 @@ class SuccessScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'Done',
+              'Profile Setup Complete',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 16),
-            SizedBox(  // Wrap the ElevatedButton with a SizedBox
-              width: 200, // Set the desired width.
+            const SizedBox(height: 8),
+            const Text(
+              'Your profile has been successfully saved',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+            const SizedBox(height: 32),
+            SizedBox(
+              width: 200,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const ProfileSetupScreen(email: '',)));
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => const HomeScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Add padding
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),

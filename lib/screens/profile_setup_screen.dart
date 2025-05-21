@@ -1,7 +1,8 @@
 import 'dart:convert';
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:flutter/material.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
-import 'home_screen.dart';
+import 'success_screen.dart';
 
 class ProfileSetupScreen extends StatefulWidget {
   final String email;
@@ -88,10 +89,22 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
 
       debugPrint('Sending profile data: ${jsonEncode(profileData)}');
 
+      // Get the current auth session
+      final authSession = await Amplify.Auth.fetchAuthSession();
+      debugPrint('Auth session: ${authSession.isSignedIn}');
+      
+      // Get the authentication token
+      final cognitoSession = authSession as CognitoAuthSession;
+      final token = cognitoSession.userPoolTokensResult.value.idToken.raw;
+      debugPrint('Token available: ${token != null}');
+
       final response = await Amplify.API.post(
         '/profile',
         apiName: 'PoligrainAPI',
         body: HttpPayload.json(profileData),
+        headers: {
+          'Authorization': 'Bearer $token',
+        },
       ).response;
 
       final bodyString = response.decodeBody();
@@ -106,7 +119,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
         if (!mounted) return;
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const HomeScreen()),
+          MaterialPageRoute(builder: (_) => const SuccessScreen()),
         );
       } else {
         setState(() {

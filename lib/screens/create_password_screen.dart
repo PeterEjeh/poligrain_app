@@ -16,6 +16,8 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
   final _confirmPassword = TextEditingController();
   bool _loading = false;
   String? _error;
+  bool _obscureNewPassword = true;
+  bool _obscureConfirmPassword = true;
 
   @override
   void dispose() {
@@ -133,7 +135,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                 const SizedBox(height: 30),
                 TextFormField(
                   controller: _newPassword,
-                  obscureText: true, // Password hidden, no toggle
+                  obscureText: _obscureNewPassword,
                   decoration: InputDecoration(
                     hintText: 'New Password',
                     hintStyle: TextStyle(color: Colors.grey.shade400),
@@ -147,13 +149,20 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     ),
                     contentPadding: const EdgeInsets.symmetric(
                         vertical: 16, horizontal: 12),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscureNewPassword ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.grey.shade600,
+                      ),
+                      onPressed: () => _setState(() => _obscureNewPassword = !_obscureNewPassword),
+                    ),
                   ),
                   validator: _passwordValidator,
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
                   controller: _confirmPassword,
-                  obscureText: true, // Password hidden, no toggle
+                  obscureText: _obscureConfirmPassword,
                   decoration: InputDecoration(
                     hintText: 'Confirm Password',
                     hintStyle: TextStyle(color: Colors.grey.shade400),
@@ -167,6 +176,13 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     ),
                     contentPadding: const EdgeInsets.symmetric(
                         vertical: 16, horizontal: 12),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.grey.shade600,
+                      ),
+                      onPressed: () => _setState(() => _obscureConfirmPassword = !_obscureConfirmPassword),
+                    ),
                   ),
                   validator: (v) =>
                   v != _newPassword.text ? 'Passwords do not match' : null,

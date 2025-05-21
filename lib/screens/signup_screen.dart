@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'email_confirmation_screen.dart';
 import 'login_screen.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:http/http.dart' as http;
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
