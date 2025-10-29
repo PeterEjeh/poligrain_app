@@ -1,0 +1,9 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "productsTable",
+      "environmentVariableName": "PRODUCTS_TABLE"
+    }
+  ]
+}

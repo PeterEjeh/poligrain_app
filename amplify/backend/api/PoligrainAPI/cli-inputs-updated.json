@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "paths": {
+    "/profile": {
+      "name": "/profile",
+      "lambdaFunction": "profileHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/products": {
+      "name": "/products",
+      "lambdaFunction": "productHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/products/{id}": {
+      "name": "/products/{id}",
+      "lambdaFunction": "productHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update", "delete"]
+      }
+    },
+    "/products/search": {
+      "name": "/products/search",
+      "lambdaFunction": "productHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/products/categories": {
+      "name": "/products/categories",
+      "lambdaFunction": "productHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/products/featured": {
+      "name": "/products/featured",
+      "lambdaFunction": "productHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/orders": {
+      "name": "/orders",
+      "lambdaFunction": "orderHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/orders/{id}": {
+      "name": "/orders/{id}",
+      "lambdaFunction": "orderHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update", "delete"]
+      }
+    },
+    "/orders/{id}/status": {
+      "name": "/orders/{id}/status",
+      "lambdaFunction": "orderHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["update"]
+      }
+    },
+    "/transactions": {
+      "name": "/transactions",
+      "lambdaFunction": "transactionHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/transactions/{id}": {
+      "name": "/transactions/{id}",
+      "lambdaFunction": "transactionHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update"]
+      }
+    },
+    "/transactions/{id}/status": {
+      "name": "/transactions/{id}/status",
+      "lambdaFunction": "transactionHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["update"]
+      }
+    },
+    "/transactions/{id}/refund": {
+      "name": "/transactions/{id}/refund",
+      "lambdaFunction": "transactionHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create"]
+      }
+    },
+    "/transactions/summary": {
+      "name": "/transactions/summary",
+      "lambdaFunction": "transactionHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/investments": {
+      "name": "/investments",
+      "lambdaFunction": "investmentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/investments/{id}": {
+      "name": "/investments/{id}",
+      "lambdaFunction": "investmentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update"]
+      }
+    },
+    "/investments/{id}/status": {
+      "name": "/investments/{id}/status",
+      "lambdaFunction": "investmentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["update"]
+      }
+    },
+    "/investments/calculate-return": {
+      "name": "/investments/calculate-return",
+      "lambdaFunction": "investmentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create"]
+      }
+    },
+    "/investments/summary": {
+      "name": "/investments/summary",
+      "lambdaFunction": "investmentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/documents": {
+      "name": "/documents",
+      "lambdaFunction": "documentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/documents/{id}": {
+      "name": "/documents/{id}",
+      "lambdaFunction": "documentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update", "delete"]
+      }
+    },
+    "/documents/{id}/verification": {
+      "name": "/documents/{id}/verification",
+      "lambdaFunction": "documentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["update"]
+      }
+    },
+    "/documents/{id}/download": {
+      "name": "/documents/{id}/download",
+      "lambdaFunction": "documentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read"]
+      }
+    },
+    "/documents/upload-url": {
+      "name": "/documents/upload-url",
+      "lambdaFunction": "documentHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create"]
+      }
+    },
+    "/loan-requests": {
+      "name": "/loan-requests",
+      "lambdaFunction": "loanHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/loan-requests/{id}": {
+      "name": "/loan-requests/{id}",
+      "lambdaFunction": "loanHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["read", "update", "delete"]
+      }
+    }
+  }
+}

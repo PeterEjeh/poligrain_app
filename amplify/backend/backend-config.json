@@ -1,0 +1,368 @@
+{
+  "api": {
+    "PoligrainAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "profileHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "loanHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ProductHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CampaignHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "poligrainapp734e0e72": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "poligrainapp734e0e72PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "DocumentHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "EmailHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "InventoryReservationHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "InvestmentHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "OrderHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "ProductHandler": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "TransactionHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createUserProfileTrigger": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "BucketName"
+          ],
+          "category": "storage",
+          "resourceName": "PoligrainStorage"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "loanHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "poligrainapp734e0e72PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "profileHandler": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "poligrainapp734e0e72"
+        },
+        {
+          "attributes": [
+            "BucketName"
+          ],
+          "category": "storage",
+          "resourceName": "PoligrainStorage"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_DocumentHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "DocumentHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_DocumentHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "DocumentHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_EmailHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EmailHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_EmailHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "EmailHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_InventoryReservationHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "InventoryReservationHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_InventoryReservationHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "InventoryReservationHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_InvestmentHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "InvestmentHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_InvestmentHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "InvestmentHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_OrderHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "OrderHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_OrderHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "OrderHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_ProductHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ProductHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_ProductHandler_productsTable": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ProductHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_ProductHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ProductHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_TransactionHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "TransactionHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_TransactionHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "TransactionHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_createUserProfileTrigger_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createUserProfileTrigger"
+        }
+      ]
+    },
+    "AMPLIFY_function_createUserProfileTrigger_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createUserProfileTrigger"
+        }
+      ]
+    },
+    "AMPLIFY_function_createUserProfileTrigger_userProfilesTable": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createUserProfileTrigger"
+        }
+      ]
+    },
+    "AMPLIFY_function_loanHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loanHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_loanHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loanHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_poligrainapp734e0e72PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "poligrainapp734e0e72PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_poligrainapp734e0e72PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "poligrainapp734e0e72PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_profileHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "profileHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_profileHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "profileHandler"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "PoligrainStorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    },
+    "UserProfiles": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

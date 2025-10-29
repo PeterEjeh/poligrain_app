@@ -1,0 +1,29 @@
+{
+  "TableName": "Campaigns",
+  "KeySchema": [{ "AttributeName": "id", "KeyType": "HASH" }],
+  "AttributeDefinitions": [
+    { "AttributeName": "id", "AttributeType": "S" },
+    { "AttributeName": "ownerId", "AttributeType": "S" },
+    { "AttributeName": "status", "AttributeType": "S" },
+    { "AttributeName": "createdAt", "AttributeType": "S" }
+  ],
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "OwnerIdIndex",
+      "KeySchema": [
+        { "AttributeName": "ownerId", "KeyType": "HASH" },
+        { "AttributeName": "createdAt", "KeyType": "RANGE" }
+      ],
+      "Projection": { "ProjectionType": "ALL" }
+    },
+    {
+      "IndexName": "StatusIndex",
+      "KeySchema": [
+        { "AttributeName": "status", "KeyType": "HASH" },
+        { "AttributeName": "createdAt", "KeyType": "RANGE" }
+      ],
+      "Projection": { "ProjectionType": "ALL" }
+    }
+  ],
+  "BillingMode": "PAY_PER_REQUEST"
+}

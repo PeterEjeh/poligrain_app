@@ -1,0 +1,77 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-poligrainapp-dev-85a4b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::745103235694:role/amplify-poligrainapp-dev-85a4b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::745103235694:role/amplify-poligrainapp-dev-85a4b-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+      "UnauthRoleName": "amplify-poligrainapp-dev-85a4b-unauthRole",
+      "StackName": "amplify-poligrainapp-dev-85a4b",
+      "StackId": "arn:aws:cloudformation:us-east-1:745103235694:stack/amplify-poligrainapp-dev-85a4b/a8722a70-22b3-11f0-abe7-12060a649277",
+      "AmplifyAppId": "d307ijv80hwscf",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-poligrainapp-dev-85a4b-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-poligrainapp-dev-85a4b-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "poligrainapp734e0e72": {}
+      },
+      "function": {
+        "profileHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/profileHandler-5568466f315476547747-build.zip"
+        },
+        "ProductHandler": {
+          "productsTable": "Products",
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/ProductHandler-374e6c66755746396e78-build.zip"
+        },
+        "loanHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/loanHandler-4567395075612b6a7378-build.zip"
+        },
+        "createUserProfileTrigger": {
+          "userProfilesTable": "UserProfiles",
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/createUserProfileTrigger-434a6141385a7a423978-build.zip"
+        },
+        "poligrainapp734e0e72PostConfirmation": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/poligrainapp734e0e72PostConfirmation-686e33756f4e74334773-build.zip"
+        },
+        "OrderHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/OrderHandler-396c475673796848556d-build.zip"
+        },
+        "TransactionHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/TransactionHandler-543465636d4352794e38-build.zip"
+        },
+        "InvestmentHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/InvestmentHandler-72353637533645797739-build.zip"
+        },
+        "DocumentHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/DocumentHandler-47355677726851774971-build.zip"
+        },
+        "InventoryReservationHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/InventoryReservationHandler-5054754e3272726e7743-build.zip"
+        },
+        "EmailHandler": {
+          "deploymentBucketName": "amplify-poligrainapp-dev-85a4b-deployment",
+          "s3Key": "amplify-builds/EmailHandler-6c73526258665a717435-build.zip"
+        }
+      },
+      "api": {
+        "PoligrainAPI": {}
+      },
+      "storage": {
+        "PoligrainStorage": {},
+        "LoanRequests": {}
+      }
+    }
+  }
+}

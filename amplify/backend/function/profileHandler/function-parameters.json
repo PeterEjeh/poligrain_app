@@ -1,0 +1,21 @@
+{
+  "lambdaLayers": [],
+  "permissions": {
+    "auth": {
+      "poligrainapp734e0e72": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "storage": {
+      "PoligrainStorage": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}

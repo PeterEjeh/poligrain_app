@@ -1,0 +1,18 @@
+{
+  "resourceName": "PoligrainStorage",
+  "policyUUID": "754e22de",
+  "bucketName": "poligrainstorage",
+  "storageAccess": "auth",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {
+    
+  }
+}

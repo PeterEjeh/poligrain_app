@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "paths": {
+    "/profile": {
+      "name": "/profile",
+      "lambdaFunction": "profileHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/loan-requests": {
+      "name": "/loan-requests",
+      "lambdaFunction": "loanHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    },
+    "/products": {
+      "name": "/products",
+      "lambdaFunction": "ProductHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": ["create", "read", "update", "delete"]
+      }
+    }
+  }
+}

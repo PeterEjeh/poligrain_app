@@ -1,0 +1,68 @@
+{
+  "Item": {
+    "id": {
+      "S": "sample-rice-campaign"
+    },
+    "title": {
+      "S": "Rice Farming Campaign"
+    },
+    "description": {
+      "S": "Sample rice farming campaign for investors"
+    },
+    "type": {
+      "S": "structured"
+    },
+    "targetAmount": {
+      "N": "1000000"
+    },
+    "minimumInvestment": {
+      "N": "100000"
+    },
+    "category": {
+      "S": "Crop"
+    },
+    "unit": {
+      "S": "Ha"
+    },
+    "quantity": {
+      "N": "2"
+    },
+    "gestationPeriod": {
+      "S": "4-5 months"
+    },
+    "tenureOptions": {
+      "L": [
+        {
+          "S": "6 months"
+        },
+        {
+          "S": "1 year"
+        }
+      ]
+    },
+    "averageCostPerUnit": {
+      "N": "350000"
+    },
+    "totalLoanIncludingFeePerUnit": {
+      "N": "358750"
+    },
+    "startDate": {
+      "S": "2025-09-08T00:00:00.000Z"
+    },
+    "endDate": {
+      "S": "2025-12-08T00:00:00.000Z"
+    },
+    "status": {
+      "S": "Active"
+    },
+    "createdAt": {
+      "S": "2025-09-08T09:00:00.000Z"
+    },
+    "owner": {
+      "S": "sample-farmer-owner"
+    },
+    "role": {
+      "S": "Farmer"
+    }
+  }
+}

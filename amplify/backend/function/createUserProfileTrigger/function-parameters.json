@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "storage": {
+      "PoligrainStorage": [
+        "create",
+        "read",
+        "update"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "userProfilesTable",
+      "environmentVariableName": "USER_PROFILES_TABLE"
+    }
+  ]
+}

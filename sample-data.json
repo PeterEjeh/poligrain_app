@@ -1,0 +1,134 @@
+[
+  {
+    "id": {
+      "S": "sample-rice-campaign"
+    },
+    "title": {
+      "S": "Rice Farming Campaign"
+    },
+    "description": {
+      "S": "Sample rice farming campaign for investors"
+    },
+    "type": {
+      "S": "structured"
+    },
+    "targetAmount": {
+      "N": "1000000"
+    },
+    "minimumInvestment": {
+      "N": "100000"
+    },
+    "category": {
+      "S": "Crop"
+    },
+    "unit": {
+      "S": "Ha"
+    },
+    "quantity": {
+      "N": "2"
+    },
+    "gestationPeriod": {
+      "S": "4-5 months"
+    },
+    "tenureOptions": {
+      "L": [
+        {
+          "S": "6 months"
+        },
+        {
+          "S": "1 year"
+        }
+      ]
+    },
+    "averageCostPerUnit": {
+      "N": "350000"
+    },
+    "totalLoanIncludingFeePerUnit": {
+      "N": "358750"
+    },
+    "startDate": {
+      "S": "2025-09-08T00:00:00.000Z"
+    },
+    "endDate": {
+      "S": "2025-12-08T00:00:00.000Z"
+    },
+    "status": {
+      "S": "Active"
+    },
+    "createdAt": {
+      "S": "2025-09-08T09:00:00.000Z"
+    },
+    "owner": {
+      "S": "sample-farmer-owner"
+    },
+    "role": {
+      "S": "Farmer"
+    }
+  },
+  {
+    "id": {
+      "S": "sample-beans-campaign"
+    },
+    "title": {
+      "S": "Beans Farming Campaign"
+    },
+    "description": {
+      "S": "Sample beans farming campaign for investors"
+    },
+    "type": {
+      "S": "structured"
+    },
+    "targetAmount": {
+      "N": "500000"
+    },
+    "minimumInvestment": {
+      "N": "50000"
+    },
+    "category": {
+      "S": "Crop"
+    },
+    "unit": {
+      "S": "Ha"
+    },
+    "quantity": {
+      "N": "1"
+    },
+    "gestationPeriod": {
+      "S": "2.5-3 months"
+    },
+    "tenureOptions": {
+      "L": [
+        {
+          "S": "3 months"
+        },
+        {
+          "S": "6 months"
+        }
+      ]
+    },
+    "averageCostPerUnit": {
+      "N": "180000"
+    },
+    "totalLoanIncludingFeePerUnit": {
+      "N": "184500"
+    },
+    "startDate": {
+      "S": "2025-09-08T00:00:00.000Z"
+    },
+    "endDate": {
+      "S": "2025-11-08T00:00:00.000Z"
+    },
+    "status": {
+      "S": "Active"
+    },
+    "createdAt": {
+      "S": "2025-09-08T10:00:00.000Z"
+    },
+    "owner": {
+      "S": "sample-farmer-owner"
+    },
+    "role": {
+      "S": "Farmer"
+    }
+  }
+]
