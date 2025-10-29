@@ -12,12 +12,12 @@ A comprehensive agricultural investment and e-commerce platform built with Flutt
   - Returns management
   - Investment portfolio analytics
 
--  **Marketplace**
+- **Marketplace**
 
-  - Product browsing with categories
-  - Detailed product views with images and videos
-  - Real-time inventory tracking
-  - Advanced search and filtering
+- Product browsing with categories
+- Detailed product views with images and videos
+- Real-time inventory tracking
+- Advanced search and filtering
 
 - 🛒 **Shopping Experience**
 
